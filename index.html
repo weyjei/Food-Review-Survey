@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Food Review Survey</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+  <body>
+    <div class="header">
+      <h1 id="title">Food Review Survey</h1>
+      <p id="description">We appreciate your feedback on your dining experience with us!</p>
+    </div>
+
+    <form id="survey-form">
+      <label id="name-label" for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label id="email-label" for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label id="number-label" for="number">How many times have you dined with us?</label>
+      <input type="number" id="number" name="number" min="1" max="50" placeholder="Enter the number of visits" required>
+
+      <label for="dropdown">How would you rate your overall experience?</label>
+      <select id="dropdown" name="dropdown">
+        <option value="none">Select one</option>
+        <option value="1">1 - Poor</option>
+        <option value="2">2 - Fair</option>
+        <option value="3">3 - Good</option>
+        <option value="4">4 - Very Good</option>
+        <option value="5">5 - Excellent</option>
+      </select>
+
+      
+      <label>What did you think of our food quality?</label>
+      <div class="radio-group">
+        <input type="radio" id="radio1" name="food-quality" value="excellent" class="radio" checked >
+        <label for="radio1">Excellent</label>
+
+        <input type="radio" id="radio2" name="food-quality" value="good" class="radio">
+        <label for="radio2">Good</label>
+
+        <input type="radio" id="radio3" name="food-quality" value="average" class="radio">
+        <label for="radio3">Average</label>
+
+        <input type="radio" id="radio4" name="food-quality" value="poor" class="radio">
+        <label for="radio4">Poor</label>
+      </div>
+
+
+      <label>Which dishes did you enjoy the most? (Select all that apply)</label>
+      <input type="checkbox" id="checkbox1" name="favorite-dish" value="appetizers">
+      <label for="checkbox1">Appetizers</label>
+      <input type="checkbox" id="checkbox2" name="favorite-dish" value="main-course">
+      <label for="checkbox2">Main Course</label>
+      <input type="checkbox" id="checkbox3" name="favorite-dish" value="desserts">
+      <label for="checkbox3">Desserts</label>
+      <input type="checkbox" id="checkbox4" name="favorite-dish" value="beverages">
+      <label for="checkbox4">Beverages</label>
+
+      <label for="comment">Additional Comments:</label>
+      <textarea id="comment" name="comment" placeholder="Share your thoughts on the dining experience"></textarea>
+
+      <button type="submit" id="submit">Submit Review</button>
+    </form>
+  </body>
+</html>
